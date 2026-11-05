@@ -1,0 +1,1204 @@
+/* =========================================================
+   MANJUREDDY - INDIAN CLASSICAL MUSIC WEBSITE
+   Main CSS File
+   ========================================================= */
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff8ed;
+    color: #3b2117;
+    line-height: 1.6;
+}
+
+
+/* ================= COMMON ================= */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   NAVIGATION BAR
+   ========================================================= */
+
+header {
+    width: 100%;
+    background: #35180f;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* LOGO */
+
+.logo {
+    color: #f5c76b;
+    font-size: 28px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* NAVIGATION LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 16px;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #f5c76b;
+}
+
+.nav-links a.active {
+    color: #f5c76b;
+}
+
+
+/* UNDERLINE EFFECT */
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+
+    width: 0;
+    height: 2px;
+
+    background: #f5c76b;
+
+    left: 0;
+    bottom: -6px;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
+.hero,
+.page-hero {
+    min-height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(53, 24, 15, 0.90),
+            rgba(53, 24, 15, 0.90)
+        );
+
+    color: white;
+
+    padding: 60px 25px;
+}
+
+.hero-content,
+.page-hero-content {
+    max-width: 900px;
+}
+
+
+/* SMALL TITLE */
+
+.small-title,
+.page-label {
+    color: #f5c76b;
+
+    letter-spacing: 4px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+
+/* HERO TITLE */
+
+.hero h1,
+.page-hero h1 {
+    font-size: 60px;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+
+/* HERO DESCRIPTION */
+
+.hero p:not(.small-title),
+.page-hero-text {
+    color: #f7e8d6;
+
+    font-size: 18px;
+
+    max-width: 750px;
+
+    margin: auto;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.hero-buttons {
+    margin-top: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    background: #f5c76b;
+
+    color: #35180f;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: white;
+
+    transform: translateY(-3px);
+}
+
+.second-btn {
+    background: transparent;
+
+    color: #f5c76b;
+
+    border: 2px solid #f5c76b;
+}
+
+.second-btn:hover {
+    background: #f5c76b;
+
+    color: #35180f;
+}
+
+
+/* =========================================================
+   COMMON SECTIONS
+   ========================================================= */
+
+.intro,
+.traditions,
+.features,
+.section {
+    padding: 80px 25px;
+}
+
+.intro,
+.traditions,
+.features,
+.section-light {
+    background: #fff8ed;
+}
+
+.section-dark {
+    background: #f3e5d0;
+}
+
+
+/* =========================================================
+   SECTION TITLES
+   ========================================================= */
+
+.section-title {
+    text-align: center;
+
+    max-width: 850px;
+
+    margin: 0 auto 25px;
+}
+
+.section-title p,
+.section-label {
+    color: #b85c38;
+
+    letter-spacing: 3px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    margin-bottom: 8px;
+}
+
+.section-title h2,
+.section-title {
+    font-size: 38px;
+
+    line-height: 1.25;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+   ========================================================= */
+
+.intro-text {
+    max-width: 800px;
+
+    margin: 30px auto 0;
+
+    text-align: center;
+
+    color: #654638;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   CARD CONTAINER
+   ========================================================= */
+
+.card-container {
+    max-width: 1100px;
+
+    margin: 50px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   MUSIC CARDS
+   ========================================================= */
+
+.music-card {
+    background: white;
+
+    padding: 40px 30px;
+
+    border-radius: 15px;
+
+    border: 1px solid #ead8bd;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s ease;
+}
+
+.music-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-icon {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+.music-card h3 {
+    color: #35180f;
+
+    font-size: 24px;
+
+    margin-bottom: 12px;
+}
+
+.music-card p {
+    color: #654638;
+
+    margin-bottom: 18px;
+}
+
+.music-card a {
+    color: #b85c38;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.music-card a:hover {
+    color: #35180f;
+}
+
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+
+.feature-container {
+    max-width: 1150px;
+
+    margin: 50px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.feature-box {
+    background: white;
+
+    padding: 30px 22px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    border: 1px solid #ead8bd;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-7px);
+
+    border-color: #b85c38;
+}
+
+.feature-box span {
+    font-size: 40px;
+}
+
+.feature-box h3 {
+    color: #35180f;
+
+    margin: 12px 0 8px;
+
+    font-size: 21px;
+}
+
+.feature-box p {
+    color: #654638;
+
+    font-size: 15px;
+
+    margin-bottom: 15px;
+}
+
+.feature-box a {
+    color: #b85c38;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   QUOTE SECTION
+   ========================================================= */
+
+.quote {
+    background: #35180f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 80px 25px;
+}
+
+.quote-content {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.quote h2 {
+    color: #f5c76b;
+
+    font-size: 38px;
+
+    font-style: italic;
+}
+
+.quote p {
+    color: #f7e8d6;
+
+    margin-top: 15px;
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   GENERAL CONTENT
+   ========================================================= */
+
+.section-description {
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    color: #654638;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   EVENT CARDS
+   ========================================================= */
+
+.events-container {
+    max-width: 1100px;
+
+    margin: 50px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+.event-card {
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    border: 1px solid #ead8bd;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+}
+
+.event-top {
+    background: #35180f;
+
+    color: white;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.event-date {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 10px;
+
+    background: #f5c76b;
+
+    color: #35180f;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+.event-date .day {
+    font-size: 25px;
+
+    font-weight: bold;
+
+    line-height: 1;
+}
+
+.event-date .month {
+    font-size: 13px;
+
+    margin-top: 5px;
+}
+
+.event-top h3 {
+    color: #f5c76b;
+
+    font-size: 22px;
+}
+
+.event-content {
+    padding: 28px;
+}
+
+.event-content p {
+    color: #654638;
+}
+
+.event-info {
+    margin-top: 18px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #ead8bd;
+}
+
+
+/* =========================================================
+   EVENT TYPES
+   ========================================================= */
+
+.type-container {
+    max-width: 1100px;
+
+    margin: 45px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.type-card {
+    background: #35180f;
+
+    color: white;
+
+    padding: 30px 20px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.type-card:hover {
+    transform: translateY(-6px);
+}
+
+.type-icon {
+    font-size: 42px;
+}
+
+.type-card h3 {
+    color: #f5c76b;
+
+    margin: 12px 0 8px;
+}
+
+.type-card p {
+    color: #f7e8d6;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   HIGHLIGHT / REASON CARDS
+   ========================================================= */
+
+.highlight-container,
+.reason-container {
+    max-width: 1050px;
+
+    margin: 45px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.highlight-box,
+.reason-card {
+    background: white;
+
+    padding: 30px 25px;
+
+    border-radius: 12px;
+
+    border: 1px solid #ead8bd;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+.highlight-box:hover,
+.reason-card:hover {
+    transform: translateY(-6px);
+}
+
+.highlight-box {
+    border-left: 5px solid #b85c38;
+}
+
+.highlight-box h3,
+.reason-card h3 {
+    color: #35180f;
+
+    margin-bottom: 10px;
+
+    font-size: 21px;
+}
+
+.highlight-box p,
+.reason-card p {
+    color: #654638;
+
+    font-size: 15px;
+}
+
+.reason-card {
+    text-align: center;
+}
+
+.reason-card span {
+    font-size: 42px;
+}
+
+
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
+
+.contact-container {
+    max-width: 1100px;
+
+    margin: 50px auto 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.3fr;
+
+    gap: 35px;
+}
+
+
+/* CONTACT INFORMATION */
+
+.contact-info {
+    background: #35180f;
+
+    color: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+}
+
+.contact-info h2 {
+    color: #f5c76b;
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+.contact-info > p {
+    color: #f7e8d6;
+
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.info-icon {
+    width: 45px;
+    height: 45px;
+
+    background: #f5c76b;
+
+    color: #35180f;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 21px;
+
+    flex-shrink: 0;
+}
+
+.info-item h3 {
+    color: #f5c76b;
+
+    font-size: 18px;
+
+    margin-bottom: 3px;
+}
+
+.info-item p {
+    color: #f7e8d6;
+
+    font-size: 15px;
+}
+
+
+/* SOCIAL LINKS */
+
+.social-links {
+    margin-top: 30px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #6b4a3a;
+}
+
+.social-links h3 {
+    color: #f5c76b;
+
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    display: inline-flex;
+
+    width: 40px;
+    height: 40px;
+
+    margin-right: 8px;
+
+    border-radius: 50%;
+
+    background: #f5c76b;
+
+    color: #35180f;
+
+    justify-content: center;
+
+    align-items: center;
+
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
+
+.contact-form {
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    border: 1px solid #ead8bd;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form h2 {
+    color: #35180f;
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.contact-form > p {
+    color: #654638;
+
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+
+    color: #35180f;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #d8c4a8;
+
+    border-radius: 8px;
+
+    background: #fffaf3;
+
+    color: #3b2117;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #b85c38;
+
+    box-shadow:
+        0 0 0 3px rgba(184, 92, 56, 0.12);
+}
+
+.form-group textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+
+/* SUBMIT BUTTON */
+
+.submit-button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: #35180f;
+
+    color: #f5c76b;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.submit-button:hover {
+    background: #b85c38;
+
+    color: white;
+}
+
+
+/* SUCCESS MESSAGE */
+
+#successMessage {
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background: #e7f5e7;
+
+    border-left: 5px solid #3d8b40;
+
+    color: #285c2b;
+
+    border-radius: 5px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    background: #21100a;
+
+    color: white;
+
+    padding: 45px 20px;
+
+    text-align: center;
+}
+
+.footer-logo {
+    color: #f5c76b;
+
+    font-size: 26px;
+
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: white;
+
+    margin: 0 9px;
+
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f5c76b;
+}
+
+.copyright {
+    margin-top: 20px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #51382c;
+
+    color: #d8c7b8;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN - TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero h1,
+    .page-hero h1 {
+        font-size: 48px;
+    }
+
+    .feature-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .type-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN - MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+
+    /* HERO */
+
+    .hero,
+    .page-hero {
+        min-height: 400px;
+
+        padding: 40px 20px;
+    }
+
+    .hero h1,
+    .page-hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p:not(.small-title),
+    .page-hero-text {
+        font-size: 16px;
+    }
+
+
+    /* SECTIONS */
+
+    .intro,
+    .traditions,
+    .features,
+    .section {
+        padding: 60px 20px;
+    }
+
+    .section-title h2,
+    .section-title {
+        font-size: 30px;
+    }
+
+
+    /* CARDS */
+
+    .card-container,
+    .feature-container,
+    .events-container,
+    .type-container,
+    .highlight-container,
+    .reason-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CONTACT */
+
+    .contact-info,
+    .contact-form {
+        padding: 25px;
+    }
+
+
+    /* QUOTE */
+
+    .quote {
+        padding: 60px 20px;
+    }
+
+    .quote h2 {
+        font-size: 28px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-links a {
+        display: inline-block;
+
+        margin: 5px 7px;
+    }
+
+}

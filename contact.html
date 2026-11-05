@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | MANJUREDDY Indian Classical Music</title>
+
+    <style>
+
+        /* ================= RESET ================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #fff8ed;
+            color: #3b2117;
+            line-height: 1.6;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        header {
+            width: 100%;
+            background: #35180f;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 25px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #f5c76b;
+            font-size: 28px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #f5c76b;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .page-hero {
+            min-height: 380px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    rgba(53, 24, 15, 0.92),
+                    rgba(53, 24, 15, 0.92)
+                );
+
+            color: white;
+        }
+
+        .page-hero-content {
+            max-width: 850px;
+            padding: 30px;
+        }
+
+        .page-label {
+            color: #f5c76b;
+            letter-spacing: 4px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .page-hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .page-hero-text {
+            color: #f7e8d6;
+            font-size: 18px;
+        }
+
+
+        /* ================= COMMON SECTION ================= */
+
+        .section {
+            padding: 80px 25px;
+        }
+
+        .section-light {
+            background: #fff8ed;
+        }
+
+        .section-dark {
+            background: #f3e5d0;
+        }
+
+        .section-label {
+            color: #b85c38;
+            letter-spacing: 3px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 38px;
+            margin: 10px 0 15px;
+        }
+
+        .section-description {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            color: #654638;
+            font-size: 17px;
+        }
+
+
+        /* ================= CONTACT AREA ================= */
+
+        .contact-container {
+            max-width: 1100px;
+            margin: 50px auto 0;
+
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+
+            gap: 35px;
+        }
+
+
+        /* ================= CONTACT INFORMATION ================= */
+
+        .contact-info {
+            background: #35180f;
+            color: white;
+
+            padding: 40px;
+
+            border-radius: 15px;
+        }
+
+        .contact-info h2 {
+            color: #f5c76b;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info > p {
+            color: #f7e8d6;
+            margin-bottom: 30px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+
+            gap: 15px;
+
+            margin-bottom: 25px;
+        }
+
+        .info-icon {
+            width: 45px;
+            height: 45px;
+
+            background: #f5c76b;
+            color: #35180f;
+
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 21px;
+
+            flex-shrink: 0;
+        }
+
+        .info-item h3 {
+            color: #f5c76b;
+            font-size: 18px;
+            margin-bottom: 3px;
+        }
+
+        .info-item p {
+            color: #f7e8d6;
+            font-size: 15px;
+        }
+
+
+        /* ================= SOCIAL MEDIA ================= */
+
+        .social-links {
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 1px solid #6b4a3a;
+        }
+
+        .social-links h3 {
+            color: #f5c76b;
+            margin-bottom: 15px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+
+            width: 40px;
+            height: 40px;
+
+            margin-right: 8px;
+
+            border-radius: 50%;
+
+            background: #f5c76b;
+            color: #35180f;
+
+            text-decoration: none;
+
+            justify-content: center;
+            align-items: center;
+
+            font-size: 18px;
+
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+
+        /* ================= CONTACT FORM ================= */
+
+        .contact-form {
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 15px;
+
+            border: 1px solid #ead8bd;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-form h2 {
+            color: #35180f;
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .contact-form > p {
+            color: #654638;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+            color: #35180f;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+
+            padding: 13px 15px;
+
+            border: 1px solid #d8c4a8;
+
+            border-radius: 8px;
+
+            background: #fffaf3;
+
+            color: #3b2117;
+
+            font-family: inherit;
+
+            font-size: 15px;
+
+            outline: none;
+
+            transition: 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #b85c38;
+
+            box-shadow:
+                0 0 0 3px rgba(184, 92, 56, 0.12);
+        }
+
+        .form-group textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            width: 100%;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 25px;
+
+            background: #35180f;
+            color: #f5c76b;
+
+            font-family: inherit;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .submit-button:hover {
+            background: #b85c38;
+            color: white;
+        }
+
+
+        /* ================= SUCCESS MESSAGE ================= */
+
+        #successMessage {
+            display: none;
+
+            margin-top: 20px;
+
+            padding: 15px;
+
+            background: #e7f5e7;
+
+            border-left: 5px solid #3d8b40;
+
+            color: #285c2b;
+
+            border-radius: 5px;
+        }
+
+
+        /* ================= HELP SECTION ================= */
+
+        .reason-container {
+            max-width: 1050px;
+
+            margin: 45px auto 0;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .reason-card {
+            background: white;
+
+            padding: 30px 25px;
+
+            text-align: center;
+
+            border-radius: 12px;
+
+            border: 1px solid #ead8bd;
+
+            box-shadow:
+                0 5px 18px rgba(0, 0, 0, 0.06);
+
+            transition: 0.3s;
+        }
+
+        .reason-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .reason-card span {
+            font-size: 42px;
+        }
+
+        .reason-card h3 {
+            margin: 12px 0 8px;
+
+            color: #35180f;
+
+            font-size: 21px;
+        }
+
+        .reason-card p {
+            color: #654638;
+
+            font-size: 15px;
+        }
+
+
+        /* ================= QUOTE ================= */
+
+        .quote {
+            background: #35180f;
+
+            color: white;
+
+            padding: 75px 25px;
+
+            text-align: center;
+        }
+
+        .quote h2 {
+            color: #f5c76b;
+
+            font-size: 35px;
+
+            font-style: italic;
+        }
+
+        .quote p {
+            margin-top: 15px;
+
+            font-size: 18px;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #21100a;
+
+            color: white;
+
+            padding: 45px 20px;
+
+            text-align: center;
+        }
+
+        .footer-logo {
+            color: #f5c76b;
+
+            font-size: 26px;
+
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            color: white;
+
+            text-decoration: none;
+
+            margin: 0 9px;
+
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #f5c76b;
+        }
+
+        .copyright {
+            margin-top: 20px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #51382c;
+
+            color: #d8c7b8;
+
+            font-size: 14px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .page-hero h1 {
+                font-size: 45px;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .reason-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .page-hero {
+                min-height: 330px;
+            }
+
+            .page-hero h1 {
+                font-size: 35px;
+            }
+
+            .reason-container {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                🎵 MANJUREDDY
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="music.html">
+                        Music
+                    </a>
+                </li>
+
+                <li>
+                    <a href="instruments.html">
+                        Instruments
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ragas.html">
+                        Ragas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="artists.html">
+                        Artists
+                    </a>
+                </li>
+
+                <li>
+                    <a href="events.html">
+                        Events
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html" class="active">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="page-hero">
+
+        <div class="page-hero-content">
+
+            <p class="page-label">
+                GET IN TOUCH
+            </p>
+
+            <h1>
+                Contact MANJUREDDY
+            </h1>
+
+            <p class="page-hero-text">
+
+                Have a question about Indian classical music?
+                We would love to hear from you.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+    <section class="section section-light">
+
+        <p class="section-label">
+            CONTACT US
+        </p>
+
+        <h2 class="section-title">
+            We'd Love to Hear From You
+        </h2>
+
+        <p class="section-description">
+
+            Get in touch with MANJUREDDY for questions,
+            suggestions, music programs and classical
+            music learning information.
+
+        </p>
+
+
+        <div class="contact-container">
+
+
+            <!-- ================= CONTACT INFORMATION ================= -->
+
+            <div class="contact-info">
+
+                <h2>
+                    Let's Connect
+                </h2>
+
+                <p>
+                    Feel free to contact us. Your interest
+                    in Indian classical music means a lot to us.
+                </p>
+
+
+                <!-- ADDRESS -->
+
+                <div class="info-item">
+
+                    <div class="info-icon">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Address
+                        </h3>
+
+                        <p>
+                            MANJUREDDY Music Centre<br>
+                            Andhra Pradesh, India
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="info-item">
+
+                    <div class="info-icon">
+                        📧
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Email
+                        </h3>
+
+                        <p>
+                            info@manjureddy.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="info-item">
+
+                    <div class="info-icon">
+                        📞
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Phone
+                        </h3>
+
+                        <p>
+                            6360852913
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WORKING HOURS -->
+
+                <div class="info-item">
+
+                    <div class="info-icon">
+                        🕐
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Working Hours
+                        </h3>
+
+                        <p>
+                            Monday – Saturday<br>
+                            9:00 AM – 6:00 PM
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SOCIAL MEDIA -->
+
+                <div class="social-links">
+
+                    <h3>
+                        Follow Us
+                    </h3>
+
+                    <a href="#" title="Facebook">
+                        f
+                    </a>
+
+                    <a href="#" title="Instagram">
+                        ◎
+                    </a>
+
+                    <a href="#" title="YouTube">
+                        ▶
+                    </a>
+
+                    <a href="#" title="Twitter">
+                        𝕏
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= CONTACT FORM ================= -->
+
+            <div class="contact-form">
+
+                <h2>
+                    Send Us a Message
+                </h2>
+
+                <p>
+                    Fill in the form below and share your message with us.
+                </p>
+
+
+                <form id="contactForm">
+
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required>
+
+                    </div>
+
+
+                    <!-- SUBJECT -->
+
+                    <div class="form-group">
+
+                        <label for="subject">
+                            Subject
+                        </label>
+
+                        <select
+                            id="subject"
+                            name="subject"
+                            required>
+
+                            <option value="">
+                                Select a subject
+                            </option>
+
+                            <option value="music">
+                                Indian Classical Music
+                            </option>
+
+                            <option value="ragas">
+                                Ragas
+                            </option>
+
+                            <option value="instruments">
+                                Instruments
+                            </option>
+
+                            <option value="events">
+                                Events
+                            </option>
+
+                            <option value="classes">
+                                Music Classes
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- MESSAGE -->
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Your Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Write your message here..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        class="submit-button">
+
+                        Send Message
+
+                    </button>
+
+
+                    <!-- SUCCESS MESSAGE -->
+
+                    <div id="successMessage">
+
+                        ✓ Thank you! Your message has been
+                        submitted successfully.
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= HELP SECTION ================= -->
+
+    <section class="section section-dark">
+
+        <p class="section-label">
+            CONNECT WITH US
+        </p>
+
+        <h2 class="section-title">
+            How Can We Help?
+        </h2>
+
+
+        <div class="reason-container">
+
+
+            <!-- CARD 1 -->
+
+            <div class="reason-card">
+
+                <span>
+                    🎼
+                </span>
+
+                <h3>
+                    Learn Music
+                </h3>
+
+                <p>
+                    Ask us about Indian classical music,
+                    ragas, talas and musical traditions.
+                </p>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+
+            <div class="reason-card">
+
+                <span>
+                    🎤
+                </span>
+
+                <h3>
+                    Events
+                </h3>
+
+                <p>
+                    Get information about concerts,
+                    workshops and classical music programs.
+                </p>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+
+            <div class="reason-card">
+
+                <span>
+                    🎻
+                </span>
+
+                <h3>
+                    Instruments
+                </h3>
+
+                <p>
+                    Learn more about traditional Indian
+                    classical musical instruments.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= QUOTE ================= -->
+
+    <section class="quote">
+
+        <h2>
+            "Music connects hearts beyond words."
+        </h2>
+
+        <p>
+            Discover, learn and celebrate Indian classical music.
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h2 class="footer-logo">
+            🎵 MANJUREDDY
+        </h2>
+
+        <p>
+            Celebrating the rich heritage of Indian Classical Music.
+        </p>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="music.html">Music</a>
+
+            <a href="instruments.html">Instruments</a>
+
+            <a href="ragas.html">Ragas</a>
+
+            <a href="artists.html">Artists</a>
+
+            <a href="events.html">Events</a>
+
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 MANJUREDDY. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        document
+            .getElementById("contactForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                document
+                    .getElementById("successMessage")
+                    .style.display = "block";
+
+                this.reset();
+
+            });
+
+    </script>
+
+
+</body>
+
+</html>

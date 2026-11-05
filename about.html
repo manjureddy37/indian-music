@@ -1,0 +1,980 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About | MANJUREDDY Indian Classical Music</title>
+
+    <style>
+
+        /* ================= RESET ================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #fff8ed;
+            color: #3b2117;
+            line-height: 1.7;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        header {
+            width: 100%;
+            background: #35180f;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 25px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #f5c76b;
+            font-size: 28px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 22px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #f5c76b;
+        }
+
+
+        /* ================= PAGE HERO ================= */
+
+        .page-hero {
+
+            min-height: 480px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    rgba(53, 24, 15, 0.60),
+                    rgba(53, 24, 15, 0.75)
+                ),
+                url("images/about-music.png");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+        }
+
+        .page-hero-content {
+            max-width: 850px;
+            padding: 30px;
+        }
+
+        .page-hero p {
+            color: #f5c76b;
+            font-size: 15px;
+            letter-spacing: 4px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .page-hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .page-hero-text {
+            color: #f7e8d6;
+            font-size: 18px;
+        }
+
+
+        /* ================= ABOUT SECTION ================= */
+
+        .about-section {
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            padding: 90px 25px;
+        }
+
+        .section-label {
+
+            color: #b85c38;
+
+            letter-spacing: 3px;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            text-align: center;
+        }
+
+        .section-title {
+
+            text-align: center;
+
+            font-size: 38px;
+
+            margin: 10px 0 40px;
+        }
+
+
+        /* IMAGE + TEXT */
+
+        .about-content {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+        .about-image {
+
+            width: 100%;
+
+            height: 380px;
+
+            object-fit: cover;
+
+            border-radius: 20px;
+
+            border: 5px solid #f3e5d0;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.18);
+
+            transition: 0.4s;
+        }
+
+        .about-image:hover {
+
+            transform: scale(1.02);
+        }
+
+        .about-text {
+
+            color: #654638;
+
+            font-size: 18px;
+
+            text-align: justify;
+        }
+
+
+        /* ================= HISTORY ================= */
+
+        .history {
+
+            background: #f3e5d0;
+
+            padding: 90px 25px;
+        }
+
+        .history-container {
+
+            max-width: 1000px;
+
+            margin: auto;
+        }
+
+        .history-container p:not(.section-label) {
+
+            color: #654638;
+
+            font-size: 17px;
+
+            margin-bottom: 22px;
+
+            text-align: justify;
+        }
+
+
+        /* ================= TRADITIONS ================= */
+
+        .traditions {
+
+            padding: 90px 25px;
+
+            background: #fff8ed;
+        }
+
+        .tradition-container {
+
+            max-width: 1050px;
+
+            margin: 45px auto 0;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 40px;
+        }
+
+        .tradition-card {
+
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 18px;
+
+            border: 1px solid #ead8bd;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.10);
+
+            transition: 0.3s;
+        }
+
+        .tradition-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .tradition-image {
+
+            width: 100%;
+
+            height: 280px;
+
+            object-fit: cover;
+
+            border-radius: 14px;
+
+            margin-bottom: 22px;
+
+            display: block;
+        }
+
+        .tradition-card h3 {
+
+            text-align: center;
+
+            font-size: 25px;
+
+            margin-bottom: 15px;
+        }
+
+        .tradition-card p {
+
+            color: #654638;
+
+            text-align: center;
+
+            font-size: 16px;
+        }
+
+
+        /* ================= CONCEPTS ================= */
+
+        .concepts {
+
+            background: #f3e5d0;
+
+            padding: 90px 25px;
+        }
+
+        .concept-container {
+
+            max-width: 1150px;
+
+            margin: 45px auto 0;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 30px;
+        }
+
+        .concept-box {
+
+            background: white;
+
+            padding: 20px;
+
+            text-align: center;
+
+            border-radius: 16px;
+
+            border: 1px solid #ead8bd;
+
+            box-shadow:
+                0 6px 20px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+        }
+
+        .concept-box:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 12px 28px rgba(0, 0, 0, 0.14);
+        }
+
+        .concept-image {
+
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: cover;
+
+            border-radius: 12px;
+
+            margin-bottom: 18px;
+
+            display: block;
+        }
+
+        .concept-box h3 {
+
+            margin: 10px 0;
+
+            font-size: 23px;
+        }
+
+        .concept-box p {
+
+            color: #654638;
+
+            font-size: 16px;
+        }
+
+
+        /* ================= QUOTE ================= */
+
+        .quote {
+
+            background: #35180f;
+
+            color: white;
+
+            padding: 90px 25px;
+
+            text-align: center;
+        }
+
+        .quote h2 {
+
+            color: #f5c76b;
+
+            font-size: 35px;
+
+            font-style: italic;
+        }
+
+        .quote p {
+
+            margin-top: 15px;
+
+            font-size: 18px;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            background: #21100a;
+
+            color: white;
+
+            padding: 45px 20px;
+
+            text-align: center;
+        }
+
+        .footer-logo {
+
+            color: #f5c76b;
+
+            font-size: 26px;
+
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+
+            color: white;
+
+            text-decoration: none;
+
+            margin: 0 10px;
+
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+
+            color: #f5c76b;
+        }
+
+        .copyright {
+
+            margin-top: 20px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #51382c;
+
+            color: #d8c7b8;
+
+            font-size: 14px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            .navbar {
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            .nav-links {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .page-hero h1 {
+
+                font-size: 45px;
+            }
+
+            .about-content {
+
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+            .tradition-container {
+
+                grid-template-columns: 1fr;
+            }
+
+            .concept-container {
+
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .page-hero {
+
+                min-height: 350px;
+            }
+
+            .page-hero h1 {
+
+                font-size: 35px;
+            }
+
+            .page-hero-text {
+
+                font-size: 16px;
+            }
+
+            .concept-container {
+
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+
+                font-size: 30px;
+            }
+
+            .about-image {
+
+                height: 280px;
+            }
+
+            .tradition-image {
+
+                height: 230px;
+            }
+
+            .concept-image {
+
+                height: 220px;
+            }
+
+            .nav-links {
+
+                gap: 12px;
+            }
+
+            .nav-links a {
+
+                font-size: 14px;
+            }
+
+            .quote h2 {
+
+                font-size: 27px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                🎵 MANJUREDDY
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html" class="active">About</a>
+                </li>
+
+                <li>
+                    <a href="music.html">Music</a>
+                </li>
+
+                <li>
+                    <a href="instruments.html">Instruments</a>
+                </li>
+
+                <li>
+                    <a href="ragas.html">Ragas</a>
+                </li>
+
+                <li>
+                    <a href="artists.html">Artists</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= IMAGE 1 : HERO ================= -->
+
+    <section class="page-hero">
+
+        <div class="page-hero-content">
+
+            <p>
+                ABOUT MANJUREDDY
+            </p>
+
+            <h1>
+                Indian Classical Music
+            </h1>
+
+            <div class="page-hero-text">
+
+                Discover the history, traditions and beauty
+                of India's classical music heritage.
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT SECTION ================= -->
+
+    <section class="about-section">
+
+        <p class="section-label">
+            ABOUT US
+        </p>
+
+        <h2 class="section-title">
+            Welcome to MANJUREDDY
+        </h2>
+
+        <div class="about-content">
+
+            <!-- IMAGE 2 -->
+
+            <img
+                src="images/about-music.png"
+                alt="Indian Classical Music"
+                class="about-image"
+            >
+
+            <p class="about-text">
+
+                MANJUREDDY is a platform dedicated to introducing
+                the beauty and richness of Indian Classical Music.
+
+                <br><br>
+
+                Our website brings together information about
+                Hindustani and Carnatic music, traditional
+                instruments, ragas, talas and legendary artists.
+
+                <br><br>
+
+                Indian Classical Music is not just music.
+                It is a beautiful combination of tradition,
+                emotion, rhythm and melody.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= HISTORY ================= -->
+
+    <section class="history">
+
+        <div class="history-container">
+
+            <p class="section-label">
+                OUR HERITAGE
+            </p>
+
+            <h2 class="section-title">
+                A Rich Musical Tradition
+            </h2>
+
+            <p>
+
+                Indian Classical Music has a long and rich
+                cultural history. Music has traditionally
+                been connected with spirituality, culture,
+                storytelling and artistic expression.
+
+            </p>
+
+            <p>
+
+                Indian classical music is primarily represented
+                by two major traditions: Hindustani Classical
+                Music of North India and Carnatic Classical
+                Music of South India.
+
+            </p>
+
+            <p>
+
+                Both traditions place great importance on
+                melody, rhythm, improvisation and the relationship
+                between the performer and the audience.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= TWO TRADITIONS ================= -->
+
+    <section class="traditions">
+
+        <p class="section-label">
+            TWO TRADITIONS
+        </p>
+
+        <h2 class="section-title">
+            Hindustani & Carnatic Music
+        </h2>
+
+
+        <div class="tradition-container">
+
+
+            <!-- IMAGE 3 : HINDUSTANI -->
+
+            <div class="tradition-card">
+
+                <img
+                    src="images/hindustani.png"
+                    alt="Hindustani Classical Music"
+                    class="tradition-image"
+                >
+
+                <h3>
+                    Hindustani Classical Music
+                </h3>
+
+                <p>
+
+                    Hindustani music is the classical music
+                    tradition associated mainly with North India.
+                    It features ragas, improvisation and a wide
+                    range of vocal and instrumental styles.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- IMAGE 4 : CARNATIC -->
+
+            <div class="tradition-card">
+
+                <img
+                    src="images/carnatic.png"
+                    alt="Carnatic Classical Music"
+                    class="tradition-image"
+                >
+
+                <h3>
+                    Carnatic Classical Music
+                </h3>
+
+                <p>
+
+                    Carnatic music is the classical music
+                    tradition of South India. It is known for
+                    structured compositions, intricate rhythms
+                    and devotional musical traditions.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= MAIN CONCEPTS ================= -->
+
+    <section class="concepts">
+
+        <p class="section-label">
+            UNDERSTAND
+        </p>
+
+        <h2 class="section-title">
+            Important Concepts
+        </h2>
+
+
+        <div class="concept-container">
+
+
+            <!-- IMAGE 5 : RAGA -->
+
+            <div class="concept-box">
+
+                <img
+                    src="images/raga.jpg"
+                    alt="Indian Raga"
+                    class="concept-image"
+                >
+
+                <h3>
+                    Raga
+                </h3>
+
+                <p>
+
+                    A melodic framework used to create
+                    musical compositions and improvisations.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- IMAGE 6 : TALA -->
+
+            <div class="concept-box">
+
+                <img
+                    src="images/tala.jpg"
+                    alt="Indian Tala"
+                    class="concept-image"
+                >
+
+                <h3>
+                    Tala
+                </h3>
+
+                <p>
+
+                    A rhythmic cycle that provides the
+                    rhythmic structure of a musical performance.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- IMAGE 7 : SWARA -->
+
+            <div class="concept-box">
+
+                <img
+                    src="images/swara.jpg"
+                    alt="Indian Swara"
+                    class="concept-image"
+                >
+
+                <h3>
+                    Swara
+                </h3>
+
+                <p>
+
+                    Musical notes that form the foundation
+                    of melody in Indian classical music.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= QUOTE ================= -->
+
+    <section class="quote">
+
+        <h2>
+            "Music connects tradition, emotion and the soul."
+        </h2>
+
+        <p>
+            Explore the timeless musical heritage of India.
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h2 class="footer-logo">
+            🎵 MANJUREDDY
+        </h2>
+
+        <p>
+            Celebrating the rich heritage of Indian Classical Music.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="music.html">Music</a>
+
+            <a href="ragas.html">Ragas</a>
+
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 MANJUREDDY. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```

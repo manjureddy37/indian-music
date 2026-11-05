@@ -1,0 +1,1039 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Instruments | MANJUREDDY Indian Classical Music</title>
+
+    <style>
+
+        /* ================= RESET ================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #fff8ed;
+            color: #3b2117;
+            line-height: 1.6;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        header {
+            width: 100%;
+            background: #35180f;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 25px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #f5c76b;
+            font-size: 28px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            list-style: none;
+
+            display: flex;
+            gap: 22px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #f5c76b;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .page-hero {
+
+            min-height: 500px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    rgba(53, 24, 15, 0.65),
+                    rgba(53, 24, 15, 0.85)
+                ),
+                url("images/instruments-hero.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+        }
+
+        .page-hero-content {
+            max-width: 850px;
+            padding: 30px;
+        }
+
+        .page-label {
+            color: #f5c76b;
+            letter-spacing: 4px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .page-hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .page-hero-text {
+            color: #f7e8d6;
+            font-size: 18px;
+        }
+
+
+        /* ================= SECTION ================= */
+
+        .section {
+            padding: 80px 25px;
+        }
+
+        .section-light {
+            background: #fff8ed;
+        }
+
+        .section-dark {
+            background: #f3e5d0;
+        }
+
+        .section-label {
+            color: #b85c38;
+            letter-spacing: 3px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 38px;
+            margin: 10px 0 15px;
+        }
+
+        .section-description {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            color: #654638;
+            font-size: 17px;
+        }
+
+
+        /* ================= INSTRUMENT CARDS ================= */
+
+        .instrument-container {
+
+            max-width: 1150px;
+            margin: 45px auto 0;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .instrument-card {
+
+            background: white;
+
+            padding: 15px;
+
+            border-radius: 15px;
+
+            border: 1px solid #ead8bd;
+
+            box-shadow:
+                0 5px 18px rgba(0, 0, 0, 0.08);
+
+            text-align: center;
+
+            transition: 0.3s;
+
+            overflow: hidden;
+        }
+
+        .instrument-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 12px 25px rgba(0, 0, 0, 0.12);
+        }
+
+
+        /* ================= INSTRUMENT IMAGE ================= */
+
+        .instrument-card img {
+
+            width: 100%;
+
+            height: 230px;
+
+            object-fit: cover;
+
+            border-radius: 12px;
+
+            display: block;
+
+            margin-bottom: 20px;
+
+            transition: 0.4s;
+        }
+
+        .instrument-card:hover img {
+            transform: scale(1.04);
+        }
+
+        .instrument-card h3 {
+
+            font-size: 25px;
+
+            margin-bottom: 12px;
+        }
+
+        .instrument-card p {
+
+            color: #654638;
+
+            font-size: 16px;
+
+            padding: 0 10px 15px;
+        }
+
+
+        /* ================= CATEGORIES ================= */
+
+        .category-container {
+
+            max-width: 1000px;
+
+            margin: 45px auto 0;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .category-box {
+
+            background: #35180f;
+
+            color: white;
+
+            padding: 15px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            overflow: hidden;
+        }
+
+
+        /* CATEGORY IMAGES */
+
+        .category-box img {
+
+            width: 100%;
+
+            height: 180px;
+
+            object-fit: cover;
+
+            border-radius: 12px;
+
+            margin-bottom: 15px;
+        }
+
+        .category-box h3 {
+
+            color: #f5c76b;
+
+            font-size: 24px;
+
+            margin: 12px 0;
+        }
+
+        .category-box p {
+
+            color: #f7e8d6;
+
+            padding-bottom: 10px;
+        }
+
+
+        /* ================= INSTRUMENT INFO ================= */
+
+        .info-container {
+
+            max-width: 1000px;
+
+            margin: 45px auto 0;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 30px;
+        }
+
+        .info-box {
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 15px;
+
+            border-left: 5px solid #b85c38;
+
+            box-shadow:
+                0 5px 18px rgba(0, 0, 0, 0.07);
+        }
+
+        .info-box h3 {
+
+            color: #35180f;
+
+            font-size: 24px;
+
+            margin-bottom: 12px;
+        }
+
+        .info-box p {
+
+            color: #654638;
+        }
+
+
+        /* ================= QUOTE ================= */
+
+        .quote {
+
+            background: #35180f;
+
+            color: white;
+
+            padding: 80px 25px;
+
+            text-align: center;
+        }
+
+        .quote h2 {
+
+            color: #f5c76b;
+
+            font-size: 35px;
+
+            font-style: italic;
+        }
+
+        .quote p {
+
+            margin-top: 15px;
+
+            font-size: 18px;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            background: #21100a;
+
+            color: white;
+
+            padding: 45px 20px;
+
+            text-align: center;
+        }
+
+        .footer-logo {
+
+            color: #f5c76b;
+
+            font-size: 26px;
+
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+
+            color: white;
+
+            text-decoration: none;
+
+            margin: 0 10px;
+
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+
+            color: #f5c76b;
+        }
+
+        .copyright {
+
+            margin-top: 20px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #51382c;
+
+            color: #d8c7b8;
+
+            font-size: 14px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            .navbar {
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            .nav-links {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .page-hero h1 {
+
+                font-size: 45px;
+            }
+
+            .instrument-container {
+
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .category-container {
+
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .page-hero {
+
+                min-height: 350px;
+            }
+
+            .page-hero h1 {
+
+                font-size: 35px;
+            }
+
+            .instrument-container,
+            .category-container,
+            .info-container {
+
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+
+                font-size: 30px;
+            }
+
+            .nav-links {
+
+                gap: 12px;
+            }
+
+            .nav-links a {
+
+                font-size: 14px;
+            }
+
+            .instrument-card img {
+
+                height: 250px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                🎵 MANJUREDDY
+            </div>
+
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="music.html">
+                        Music
+                    </a>
+                </li>
+
+                <li>
+                    <a href="instruments.html"
+                       class="active">
+                        Instruments
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ragas.html">
+                        Ragas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="artists.html">
+                        Artists
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="page-hero">
+
+        <div class="page-hero-content">
+
+            <p class="page-label">
+                TRADITIONAL INSTRUMENTS
+            </p>
+
+            <h1>
+                Indian Musical Instruments
+            </h1>
+
+            <p class="page-hero-text">
+
+                Explore the beautiful instruments that bring
+                Indian Classical Music to life.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= MAIN INSTRUMENTS ================= -->
+
+    <section class="section section-light">
+
+        <p class="section-label">
+            EXPLORE
+        </p>
+
+        <h2 class="section-title">
+            Famous Indian Instruments
+        </h2>
+
+        <p class="section-description">
+
+            Indian Classical Music uses a wide variety of
+            traditional instruments. Each instrument has its
+            own unique sound, history and role in performance.
+
+        </p>
+
+
+        <div class="instrument-container">
+
+
+            <!-- ================= SITAR ================= -->
+
+            <div class="instrument-card">
+
+                <img
+                    <img
+    src="images/sitar.png"
+    alt="Indian Sitar">
+
+                <h3>
+                    Sitar
+                </h3>
+
+                <p>
+
+                    A famous string instrument strongly associated
+                    with Hindustani classical music. It is known
+                    for its rich and resonant sound.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= VEENA ================= -->
+
+            <div class="instrument-card">
+
+                <img
+                    src="images/veena.png"
+                    alt="Indian Veena">
+
+                <h3>
+                    Veena
+                </h3>
+
+                <p>
+
+                    An important string instrument in Carnatic
+                    music, traditionally associated with
+                    South Indian classical music.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= TABLA ================= -->
+
+            <div class="instrument-card">
+
+                <img
+                    src="images/tabla.png"
+                    alt="Indian Tabla">
+
+                <h3>
+                    Tabla
+                </h3>
+
+                <p>
+
+                    A pair of hand drums widely used in
+                    Hindustani classical music for providing
+                    rhythmic accompaniment.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= MRIDANGAM ================= -->
+
+            <div class="instrument-card">
+
+                <img
+                    src="images/mridangam.png"
+                    alt="Indian Mridangam">
+
+                <h3>
+                    Mridangam
+                </h3>
+
+                <p>
+
+                    A major percussion instrument used in
+                    Carnatic music and commonly played during
+                    classical performances.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= FLUTE ================= -->
+
+            <div class="instrument-card">
+
+                <img
+                    src="images/flute.png"
+                    alt="Indian Classical Flute">
+
+                <h3>
+                    Flute
+                </h3>
+
+                <p>
+
+                    A wind instrument made traditionally from
+                    bamboo and known for its soft and expressive
+                    musical tone.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= VIOLIN ================= -->
+
+            <div class="instrument-card">
+
+                <img
+                    src="images/violin.png"
+                    alt="Indian Classical Violin">
+
+                <h3>
+                    Violin
+                </h3>
+
+                <p>
+
+                    The violin has become an important instrument
+                    in Carnatic music and is commonly used to
+                    accompany vocal performances.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= INSTRUMENT CATEGORIES ================= -->
+
+    <section class="section section-dark">
+
+        <p class="section-label">
+            CLASSIFICATION
+        </p>
+
+        <h2 class="section-title">
+            Types of Instruments
+        </h2>
+
+
+        <div class="category-container">
+
+
+            <!-- ================= STRING ================= -->
+
+            <div class="category-box">
+
+                <img
+                    src="images/string instrts.jpg"
+                    alt="String Instruments">
+
+                <h3>
+                    String Instruments
+                </h3>
+
+                <p>
+
+                    Instruments such as Sitar, Veena and
+                    Sarod produce sound through vibrating strings.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= PERCUSSION ================= -->
+
+            <div class="category-box">
+
+                <img
+                    src="images/percussion instruments.jpg"
+                    alt="Percussion Instruments">
+
+                <h3>
+                    Percussion Instruments
+                </h3>
+
+                <p>
+
+                    Instruments such as Tabla and Mridangam
+                    provide rhythm and beats.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= WIND ================= -->
+
+            <div class="category-box">
+
+                <img
+                    src="images/wind instruments.jpg"
+                    alt="Wind Instruments">
+
+                <h3>
+                    Wind Instruments
+                </h3>
+
+                <p>
+
+                    Instruments such as Flute and Nadaswaram
+                    create melodies using air.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= MORE INFORMATION ================= -->
+
+    <section class="section section-light">
+
+        <p class="section-label">
+            MUSICAL HERITAGE
+        </p>
+
+        <h2 class="section-title">
+            Instruments & Indian Culture
+        </h2>
+
+
+        <div class="info-container">
+
+
+            <div class="info-box">
+
+                <h3>
+                    🎵 Connection with Tradition
+                </h3>
+
+                <p>
+
+                    Indian musical instruments have been an
+                    important part of cultural and artistic
+                    traditions for generations.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <h3>
+                    🎼 Role in Classical Music
+                </h3>
+
+                <p>
+
+                    Instruments can provide melody, rhythm,
+                    accompaniment or support for classical
+                    vocal performances.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <h3>
+                    🪕 Unique Sounds
+                </h3>
+
+                <p>
+
+                    Every instrument has a distinctive tone
+                    that contributes to the expressive character
+                    of Indian classical music.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <h3>
+                    🌿 Cultural Heritage
+                </h3>
+
+                <p>
+
+                    Traditional instruments continue to connect
+                    modern audiences with India's rich musical
+                    heritage.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= QUOTE ================= -->
+
+    <section class="quote">
+
+        <h2>
+            "Every instrument has a voice of its own."
+        </h2>
+
+        <p>
+            Discover the sounds of India's musical heritage.
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h2 class="footer-logo">
+            🎵 MANJUREDDY
+        </h2>
+
+        <p>
+            Celebrating the rich heritage of Indian Classical Music.
+        </p>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="music.html">
+                Music
+            </a>
+
+            <a href="ragas.html">
+                Ragas
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 MANJUREDDY. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```
